@@ -8,6 +8,9 @@ const Navbar_top = (props) => {
     <div className='header_navbar'>
         <div className='choused_favorit'>
             <img src={logo} alt="Иконка избранных произведений" />
+            <div className='favorit_round'>
+                <a href="#">0</a>
+            </div>
 
         </div>
         <div className='header_navbar_main'>

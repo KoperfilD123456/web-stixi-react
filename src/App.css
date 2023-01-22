@@ -1,19 +1,41 @@
+@font-face {
+  font-family: "CeraPro";
+  src: url("./fonts/CeraPro-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
+}
+
+
+
 .App {
   text-align: center;
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: "CeraPro";
+  background-image: url(./img/Фон.png);
 }
 
-.header_navbar{
+.wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header_navbar {
   max-width: 100%;
 
 
 }
 
-.header_navbar_main{
+.header_navbar_main {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -23,15 +45,15 @@
   padding: 30px 0px;
 }
 
-.header_navbar_categories{
+.header_navbar_categories {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
 }
 
-.header_navbar_categories a{
+.header_navbar_categories a {
   text-decoration: none;
-  text-transform: none;  
+  text-transform: none;
   font-size: 24px;
   line-height: 30px;
   align-items: center;
@@ -40,11 +62,11 @@
   padding: 0px 30px 0px 0px;
 }
 
-.header_navbar_categories a:last-child{
+.header_navbar_categories a:last-child {
   padding: 0px;
 }
 
-.header_navbar_categories a::after{
+.header_navbar_categories a::after {
   content: url(C:\Users\Masik\Desktop\startup\startup\src\img\Polygon_1.png);
   padding: 0px 0px 0px 5px;
   width: 10px;
@@ -52,44 +74,37 @@
   display: inline-block;
 }
 
-.choused_favorit{
+.choused_favorit {
   display: flex;
   justify-content: flex-end;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 20px 30px 0px;
   position: relative;
+
+}
+
+.choused_favorit img,.favorit_round{
   cursor: pointer;
 }
 
-.footer{
+.footer {
   height: 265px;
   background: #38393D;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0px 130px 20px 130px;
 }
 
-.page_content{
+.page_content {
   min-height: calc(100vh - 265px);
 }
-html,body{
+
+html,
+body {
   height: 100%;
 }
 
-@media screen and (max-width: 425px) {
-  .choused_favorit img{
-    width: 30px;
-  }
-
-}
-
-
-@media screen and (max-width:910px) {
-  .header_navbar_categories a{
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0px 0px 10px 0px;
-  }
-}
-
-.favorit_round{
+.favorit_round {
   position: absolute;
   border-radius: 50%;
   width: 28.57px;
@@ -100,8 +115,225 @@ html,body{
   border: 1px solid #FFFFFF;
 }
 
-.favorit_round a{
+.favorit_round a {
   text-decoration: none;
   color: #ffffff;
   vertical-align: middle;
+}
+
+.footer-leftpart {
+  max-width: 800px;
+  margin-right: 20px;
+}
+
+.footer_categories__list {
+  display: flex;
+  padding-inline-start: 0px;
+  flex-wrap: wrap;
+}
+
+.footer_categories__list a {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.footer_categories__list li {
+  list-style: none;
+  padding: 0px 15px 0px 0px;
+  text-align: left;
+}
+
+.footer_categories__list li:last-child {
+  padding: 0px;
+}
+
+.footer_categories {
+  font-family: 'Cera Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer_aboutus {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: left;
+}
+
+.footer_aboutus p:first-child {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 15px;
+}
+
+.footer_aboutus p:last-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0px 0px 10px 0px;
+}
+
+.footer_yeardate {
+  margin-top: 30px;
+}
+
+.footer_yeardate p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+.footer-rightpart {
+  margin-top: 20px;
+  margin-right: 50px;
+  text-align: left;
+}
+
+.footer_politics p:last-child{
+  max-width: 270px;
+}
+
+.footer_contacts p:last-child{
+  padding-bottom: 0px;
+}
+
+.footer_contacts p:first-child {
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.footer_contacts p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding-bottom: 15px;
+}
+
+.footer_politics{
+  margin-top: 30px;
+}
+
+.footer_politics p:first-child{
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercases;
+  padding-bottom: 15px;
+}
+
+.footer_politics p:last-child{
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+/* Адаптив */
+
+@media screen and (max-width:1024px) {
+  .footer {
+    padding: 0px 100px 20px 100px;
+  }
+  
+  .footer_categories__list{
+    font-size: 14px;
+  }
+  .footer_aboutus p:first-child{
+    font-size: 16px;
+  }
+  .footer_aboutus p:last-child{
+    font-size: 10px;
+  }
+  .footer_aboutus {
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer_contacts p:first-child{
+    font-size: 16px;
+  }
+  .footer_contacts p{
+    font-size: 10px;
+  }
+  .footer_politics p:first-child{
+    font-size: 16px;
+  }
+  .footer_politics p:last-child{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:975px){
+  .footer{
+    padding: 0px 30px 20px 30px;
+    height: 100%;
+
+  }
+}
+
+@media screen and (max-width:775px){
+  .footer{
+    padding: 0px 30px 50px 30px;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .header_navbar_categories{
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width:530px){
+  .footer_categories__list{
+    flex-wrap: wrap;
+  }
+  .footer_categories__list li{
+    display: block;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width:910px) {
+  .header_navbar_categories a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .choused_favorit img {
+    width: 30px;
+  }
+  .favorit_round {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    right: 12px;
+    top: 15px;
+    background: rgba(255, 0, 0, 0.9);
+    border: 1px solid #FFFFFF;
+  }
+  .favorit_round a{
+    font-size: 14px;
+    vertical-align:top;
+  }
 }

@@ -2,9 +2,11 @@ import React from 'react';
 
 
 const Page_content = (props) => {
-    return <div className="page_content">
+    return (
+        <div className="page_content">
 
-    </div>
+        </div>
+    )
 }
 
 
